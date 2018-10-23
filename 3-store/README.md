@@ -1,2 +1,1 @@
 # simple JS reactive component state manager
-

@@ -1,2 +1,1 @@
-# simpleReactiveComponentStateManager
-With No Outer Dependencies
+# simple JS reactive component state manager

@@ -1,0 +1,13 @@
+{
+  "name": "2-events-actions-and-reducers",
+  "version": "1.0.0",
+  "description": "With No Outer Dependencies",
+  "main": "index.js",
+  "scripts": {
+    "bundle-js": "browserify ./src/component/component.js -o ./src/bundle.js",
+    "start": "cd src && live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
