@@ -1,0 +1,24 @@
+body {
+    padding: 180px;
+    background-color: rgb(215, 218, 213);
+}
+
+.wrapper {
+    display: block;
+    margin: 0 auto;
+    padding: 5px;
+    border: 2px solid green;
+    width: 260px;
+}
+
+.wrapper .component * {
+    display: inline-block;
+    margin: 5px 5px 5px 7%;
+}
+.wrapper .component .btn {
+    width: 60px;
+}
+
+.wrapper .name {
+    margin-left: 22px;
+}

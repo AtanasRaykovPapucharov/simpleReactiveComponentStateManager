@@ -1,0 +1,13 @@
+{
+  "name": "1-setup-component-state",
+  "version": "1.0.0",
+  "description": "For this 7 steps example my code objects import/export is [nodejs](https://nodejs.org/) style so for bundler I use [browserify](http://browserify.org/) so:\r - init package.json: **npm init -y** \r - install browserify as a development dependency: \r  **npm i -D browserify**",
+  "main": "index.js",
+  "scripts": {
+    "bundle-js": "browserify ./src/component/component.js -o ./src/bundle.js",
+    "start": "cd src && live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
