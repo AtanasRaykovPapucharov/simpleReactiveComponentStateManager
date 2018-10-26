@@ -58,6 +58,10 @@ const stateInitial = {
     value: 5
 }
 
+let state = initialState
+```
+
+```
 function _renderState(state) {
     document.getElementById('number').innerHTML = state.value
 }

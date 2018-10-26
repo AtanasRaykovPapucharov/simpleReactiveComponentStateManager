@@ -2,14 +2,16 @@
 
 const store = require('./store')
 
-module.exports = {
-    createStore(state) {
-        return store(state)
+const stateManager = {
+    createStore(state, reducer) {
+        return store(state, reducer)
     },
     createAction(type, func) {
         return {
             type: type,
-            init: func
+            payload: func
         }
     }
 }
+
+module.exports = stateManager

@@ -1,23 +1,25 @@
 'use strict'
 
-const store = state => {
+const store = (state, reducer) => {
     let currentState = state || {}
     const subscribes = []
-    const change = (state, action) => {
-        if (action) {
-            return action.init(state)
-        }
-    }
+
     return {
         subscribe(func) {
             subscribes.push(func)
         },
         dispatch(action) {
-            const newState = change(currentState, action)
-            subscribes.forEach(func => {
-                func(newState)
-            })
-            currentState = newState
+            try {
+                const newState = reducer(currentState, action)
+
+                subscribes.forEach(func => {
+                    func(newState)
+                })
+
+                currentState = newState
+            } catch(err) {
+                throw new Error(`ERROR: No reducer!, ${err}`)
+            }
         },
         getState() {
             return currentState

@@ -18,6 +18,26 @@ fetch('./component/component.html')
         console.log('Error: ' + error)
     })
 
+
+//===========================================================
+// component click event listener
+wrapper.addEventListener('click', event => {
+    const target = event.target
+    
+    switch (target.id) {
+        case 'up':
+            state.value += 1
+            _renderState(state)
+            break
+        case 'down':
+            state.value -= 1
+            _renderState(state)
+            break
+    }
+})
+//===========================================================
+
+
 // render state value
 function _renderState(state) {
     document.getElementById('number').innerHTML = state.value

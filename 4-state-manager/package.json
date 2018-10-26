@@ -1,0 +1,13 @@
+{
+  "name": "4-state-manager",
+  "version": "1.0.0",
+  "description": "The **StateManager** is just a factory. It creates stores and actions:",
+  "main": "stateManager.js",
+  "scripts": {
+    "bundle-js": "browserify ./src/component/component.js -o ./src/bundle.js",
+    "start": "cd src && live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
