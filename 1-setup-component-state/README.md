@@ -54,7 +54,7 @@ fetch('./component/component.html')
 
 - component state is an object contains component variables
 ```
-const stateInitial = {
+const initialState = {
     value: 5
 }
 
