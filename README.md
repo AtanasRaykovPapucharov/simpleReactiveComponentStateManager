@@ -1,6 +1,6 @@
 # simple JavaScript reactive component state manager with no outer dependencies
 
-## 7 steps example
+## 6 steps example
 
 1. [Setup, component, state](https://github.com/AtanasRaykovPapucharov/simpleReactiveComponentStateManager/tree/master/1-setup-component-state)
 2. [Events](https://github.com/AtanasRaykovPapucharov/simpleReactiveComponentStateManager/tree/master/2-events)
@@ -8,7 +8,6 @@
 4. [Reducer and State manager](https://github.com/AtanasRaykovPapucharov/simpleReactiveComponentStateManager/tree/master/4-reducer-and-state-manager)
 5. [Publish / subscribe](https://github.com/AtanasRaykovPapucharov/simpleReactiveComponentStateManager/tree/master/5-publish-subscribe)
 6. [Observer and observable](https://github.com/AtanasRaykovPapucharov/simpleReactiveComponentStateManager/tree/master/6-observer-and-observable)
-7. [Middleware action operators](https://github.com/AtanasRaykovPapucharov/simpleReactiveComponentStateManager/tree/master/7-middleware-action-operators)
 
 ## The purpose of this simple example is to implement state manager pattern in a reactive variant
 
