@@ -1,0 +1,13 @@
+{
+  "name": "6-observer-and-observable",
+  "version": "1.0.0",
+  "description": "",
+  "main": "observable.js",
+  "scripts": {
+    "bundle": "browserify src/component/component.js -o src/bundle.js",
+    "start": "cd src && live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

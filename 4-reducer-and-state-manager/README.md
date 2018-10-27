@@ -1,30 +1,5 @@
 # simple JS reactive component state manager
 
-The **StateManager** is just a factory. It creates stores and actions:
-
-```
-interface IStateManager {
-    createStore(state: object): IStore
-    createAction(type: string, func: object): IAction
-}
-```
-
-And it's implementation:
-
-```
-const stateManager = {
-    createStore(state, reducer) {
-        return store(state, reducer)
-    },
-    createAction(type, func) {
-        return {
-            type: type,
-            payload: func
-        }
-    }
-}
-```
-
 ## The click **event listener** - 1) handles event and dispatch it to the store:
 
 ```
@@ -57,4 +32,29 @@ const reducer = (state = state, action) => {
 store.subscribe(() => {
     _renderState(state)
 })
+```
+
+The **StateManager** is just a factory. It creates stores and actions:
+
+```
+interface IStateManager {
+    createStore(state: object): IStore
+    createAction(type: string, func: object): IAction
+}
+```
+
+And it's implementation:
+
+```
+const stateManager = {
+    createStore(state, reducer) {
+        return store(state, reducer)
+    },
+    createAction(type, func) {
+        return {
+            type: type,
+            payload: func
+        }
+    }
+}
 ```

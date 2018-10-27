@@ -50,11 +50,14 @@ fetch('./component/component.html')
 
 
 //===========================================================
-// component click event listener
-wrapper.addEventListener('click', event => {
-    const target = event.target.id
-    store.dispatch(action[target])
-})
+// reactive event listener
+const fromEvent = require('../../observable').hotFromEvent
+
+fromEvent(document, 'click')
+    .subscribe(event => {
+        const act = action[event.target.id]
+        store.dispatch(act)
+    })
 //===========================================================
 
 
