@@ -1,5 +1,12 @@
 # simple JS reactive component state manager
 
+```
+const action = {
+    up: stateManager.createAction('INCREASE', _increaseValue),
+    down: stateManager.createAction('DECREASE', _decreaseValue)
+}
+```
+
 ## The click **event listener** - 1) handles event and dispatch it to the store:
 
 ```

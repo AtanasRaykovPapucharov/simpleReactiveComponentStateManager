@@ -7,14 +7,13 @@ let state = stateInitial
 
 const stateManager = require('../../stateManager')
 
-
-// state change messenger
+// action - bring the state change type
 const action = {
     up: stateManager.createAction('INCREASE', _increaseValue),
     down: stateManager.createAction('DECREASE', _decreaseValue)
 }
 
-// change the state in response of the action
+// reducer - change the state in response of the action
 const reducer = (state = state, action) => {
     switch (action.type) {
         case 'INCREASE':
@@ -35,14 +34,16 @@ store.subscribe(() => {
     _renderState(state)
 })
 
-// get html component and append it to DOM element - wrapper
-fetch('./component/component.html')
+fetch('./component/component.html') // get html component
     .then(component => {
-        return component.text()
+        return component.text() // return Promise
     })
     .then(component => {
-        wrapper.innerHTML = `${component}`
-        _renderState(state)
+        wrapper.innerHTML = `${component}` // append it to DOM element - wrapper
+        return
+    })
+    .then(() => {
+        _renderState(state) // this is initial state
     })
     .catch(error => {
         console.log('Error: ' + error)

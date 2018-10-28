@@ -6,19 +6,27 @@ const stateInitial = {
 
 let state = stateInitial
 
-// get html component and append it to DOM element - wrapper
+// get html component
+// append it to DOM element - wrapper
+// render initial state
 fetch('./component/component.html')
     .then(component => {
         return component.text()
     })
     .then(component => {
         wrapper.innerHTML = `${component}`
+        return
+    })
+    .then(() => {
         _renderState(state)
     })
     .catch(error => {
         console.log('Error: ' + error)
     })
 
+
+//===========================================================
+// component click event listener
 wrapper.addEventListener('click', event => {
     const target = event.target
     
@@ -33,6 +41,7 @@ wrapper.addEventListener('click', event => {
             break
     }
 })
+//===========================================================
 
 
 // render state value

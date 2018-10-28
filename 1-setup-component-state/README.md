@@ -34,7 +34,7 @@ src
 \_style.css
 ```
 
-- get html component and append it to DOM element - wrapper
+- get html component and append it to DOM element (wrapper), after that call render state
 
 ```
 fetch('./component/component.html')
@@ -43,7 +43,10 @@ fetch('./component/component.html')
     })
     .then(component => {
         wrapper.innerHTML = `${component}`
-        _renderState(state)
+        return
+    })
+    .then(() => {
+        renderState(state)
     })
     .catch(error => {
         console.log('Error: ' + error)

@@ -39,7 +39,7 @@ const store = (state, reducer) => {
     }
 }
 ```
-The **action** that change state looks like:
+The **action** brings the state changes to the reducer. It looks like:
 
 ```
 interface IAction {
