@@ -1,4 +1,4 @@
-# simple JavaScript reactive component state manager with no outer dependencies
+# simple JavaScript reactive component state manager with no external dependencies
 
 ## 6 steps example
 
